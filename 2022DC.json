@@ -79,8 +79,8 @@
             "defaultValue": "simon"
         },
         "adminPassword": {
-            "type": "secureString",
-            "defaultValue": ""
+            "type": "string",
+            "defaultValue": "12345abcdeFGHIJ"
         },
         "patchMode": {
             "type": "string",
