@@ -67,7 +67,8 @@
         },
         "virtualMachineSize": {
             "type": "string",
-            "defaultValue": "Standard_E2s_v3"
+            "defaultValue": "Standard_E2s_v3",
+            "allowedValues": ["Standard_B2s","Standard_E2s_v3"]
         },
         "nicDeleteOption": {
             "type": "string",
@@ -164,7 +165,22 @@
             "apiVersion": "2019-02-01",
             "location": "[parameters('location')]",
             "properties": {
-                "securityRules": "[parameters('networkSecurityGroupRules')]"
+                "securityRules": [
+                    {
+                      "name": "first_rule",
+                      "properties": {
+                        "description": "This is the first rule",
+                        "priority":300,
+						"protocol":"TCP",
+						"access":"Allow",
+						"direction":"Inbound",
+						"sourceAddressPrefix":"*",
+						"sourcePortRange":"*",
+						"destinationAddressPrefix":"*",
+						"destinationPortRange":"3389"
+                      }
+                    }
+                ]
             }
         },
         {
@@ -303,4 +319,4 @@
             "value": "[parameters('adminUsername')]"
         }
     }
-} 
+}
