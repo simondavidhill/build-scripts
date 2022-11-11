@@ -12,7 +12,7 @@
         },
         "enableAcceleratedNetworking": {
             "type": "bool",
-            "defaultValue": "true"
+            "defaultValue": true
         },
         "networkSecurityGroupName": {
             "type": "string",
@@ -87,7 +87,7 @@
         },
         "enableHotpatching": {
             "type": "bool",
-            "defaultValue": "true"
+            "defaultValue": true
         },
         "zone": {
             "type": "string",
