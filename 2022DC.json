@@ -68,7 +68,6 @@
         "virtualMachineSize": {
             "type": "string",
             "defaultValue": "Standard_E2s_v3"
-            "allowedValues": ["Standard_B2s","Standard_E2s_v3"]
         },
         "nicDeleteOption": {
             "type": "string",
