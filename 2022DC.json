@@ -16,10 +16,7 @@
         },
         "networkSecurityGroupName": {
             "type": "string",
-            "defaultValue": "[concat(parameters('virtualMachineName'), '-nsg')]"
-        },
-        "networkSecurityGroupRules": {
-            "type": "array"
+            "defaultValue": "2022DC-nsg"
         },
         "subnetName": {
             "type": "string",
